@@ -1,0 +1,58 @@
+{
+	"fieldSets": [
+		{
+			"label":"data",
+			"fields":[
+				{
+					"name":"structuredContentId",
+					"label":"Structured Content Id",
+					"description":"The numeric Id of the content type.",
+					"type":"text",
+					"defaultValue":"35031"
+				},
+				{
+					"name": "filterType",
+					"label": "Content Filter Type",
+					"description": "Specify the type of the filtering.",
+					"type": "select",
+					"dataType": "string",
+					"typeOptions": {
+						"validValues": [
+							{"value": "By Tag Value"},
+							{"value": "By User Custom Field"}
+						]
+					},
+					"defaultValue": "By Tag Value"
+				},
+				{
+					"name":"filterCriteria",
+					"label":"Filter Criteria",
+					"description":"Filtering criteria: tagname or expandoname",
+					"type":"text",
+					"defaultValue":"featured-astro"
+				},
+				{
+					"name":"pageSize",
+					"label":"Items per Page",
+					"description":"Number of items to display per page.",
+					"type":"text",
+					"defaultValue":"3"
+				},
+				{
+					"name":"imageFieldName",
+					"label":"Image Field Name",
+					"description":"The name of the image content field.",
+					"type":"text",
+					"defaultValue":"Image31724037"
+				},
+				{
+					"name":"summaryFieldName",
+					"label":"Summary Field Name",
+					"description":"The name of the summary content field.",
+					"type":"text",
+					"defaultValue":"Text77972410"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,45 @@
+[#assign queryFilterValue = "" /]
+
+[#switch configuration.filterType]
+	[#case "By User Custom Field"]
+		[#if user.getExpandoBridge().getAttribute(configuration.filterCriteria)?has_content]
+			[#assign queryFilterValue = user.getExpandoBridge().getAttribute(configuration.filterCriteria) /]
+		[/#if]
+		[#break]
+	[#case "By Tag Value"]
+	[#default]
+		[#assign queryFilterValue = configuration.filterCriteria /]
+[/#switch]
+
+<div class="fragment_106 paginated-struct-fragment-container" id="paginated-struc-fragment-container-${fragmentEntryLinkNamespace}">
+	<data class="d-none" name="filter-criteria" value="${queryFilterValue}" />
+
+	<!-- display section -->
+	<div class="paginated-struc-frag-content-display">
+	</div>
+	
+	<!-- pagination section -->
+	<div class="paginated-struct-frag-pagination-bar d-flex justify-content-between align-items-center">
+		<div class="paginated-struc-frag-showing-entries">
+			Showing a to b of n entries.
+		</div>
+		<div class="paginated-struc-frag-page-nav">
+			<ul class="paginated-struc-frag-pagination-root pagination pagination-root">
+				<li class="page-item disabled">
+					<button type="button" aria-label="Previous" class="page-link">
+						<svg class="lexicon-icon lexicon-icon-angle-left" role="presentation">
+							<use xlink:href="/o/dialect-theme/images/clay/icons.svg#angle-left"></use>
+						</svg>
+					</button>
+				</li>
+				<li class="page-item">
+					<button type="button" aria-label="Next" class="page-link">
+						<svg class="lexicon-icon lexicon-icon-angle-right" role="presentation">
+							<use xlink:href="/o/dialect-theme/images/clay/icons.svg#angle-right"></use>
+						</svg>
+					</button>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
