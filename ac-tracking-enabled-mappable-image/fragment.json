@@ -1,0 +1,11 @@
+{
+  "configurationPath": "configuration.json",
+  "jsPath": "index.js",
+  "htmlPath": "index.html",
+  "cssPath": "index.css",
+  "icon": "picture",
+  "name": "Mappable Image",
+  "thumbnailPath": "thumbnail.png",
+  "cacheable": true,
+  "type": "component"
+}
